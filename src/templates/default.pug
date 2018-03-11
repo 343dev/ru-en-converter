@@ -1,0 +1,46 @@
+- var isCSSDeferred = false;
+
+doctype html
+html.no-js(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport' content='width=device-width, initial-scale=1.0')
+    meta(http-equiv='X-UA-Compatible' content='ie=edge')
+    block title
+      title Untitled
+    if !isCSSDeferred
+      // inject:css
+      // endinject
+    script
+      .
+        var $html = document.documentElement;
+        $html.className = $html.className.replace('no-js', '');
+
+  body.page
+    block body
+      p Content block
+
+    ='\n\n'
+    // JavaScript
+    // inject:js
+    // endinject
+
+    if isCSSDeferred
+      script.
+        window.addEventListener('DOMContentLoaded', function() {
+          // Loading CSS without blocking render
+          var noscript = document.getElementById('deferred-styles'),
+              div = document.createElement('div');
+          div.innerHTML = noscript.textContent;
+          document.body.appendChild(div);
+          noscript.parentElement.removeChild(noscript);
+        });
+
+      ='\n\n'
+      // CSS
+      ='\n'
+      noscript#deferred-styles
+        // inject:css
+        // endinject
+      ='\n'
+

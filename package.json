@@ -1,0 +1,62 @@
+{
+  "name": "boilerplate-gulp-pug",
+  "description": "HTML projects boilerplate (Gulp, Pug, PostCSS, Browserify, Babel).",
+  "version": "3.0.2",
+  "private": true,
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://343dev@bitbucket.org/343dev/boilerplate-gulp-pug.git"
+  },
+  "scripts": {
+    "start": "gulp --continue",
+    "build": "gulp build",
+    "build:production": "NODE_ENV=production gulp build"
+  },
+  "browserslist": [
+    "last 2 versions",
+    "not ie < 11"
+  ],
+  "devDependencies": {
+    "autoprefixer": "^8.1.0",
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
+    "browser-sync": "^2.23.6",
+    "browserify": "^16.1.1",
+    "css-mqpacker": "^6.0.2",
+    "gulp": "^4.0.0",
+    "gulp-butternut": "^1.0.0",
+    "gulp-changed": "^3.2.0",
+    "gulp-csso": "^3.0.1",
+    "gulp-dest-clean": "^0.5.0",
+    "gulp-htmlmin": "^4.0.0",
+    "gulp-if": "^2.0.2",
+    "gulp-imagemin": "^4.1.0",
+    "gulp-inject": "^4.3.1",
+    "gulp-jsbeautifier": "^2.1.2",
+    "gulp-plumber": "^1.2.0",
+    "gulp-postcss": "^7.0.1",
+    "gulp-pug": "^3.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-rev": "^8.1.1",
+    "imagemin-mozjpeg": "^7.0.0",
+    "imagemin-pngquant": "^5.0.1",
+    "lost": "^8.2.1",
+    "multipipe": "^2.0.3",
+    "postcss-assets": "^5.0.0",
+    "postcss-combine-duplicated-selectors": "^4.0.4",
+    "postcss-discard-comments": "^2.0.4",
+    "postcss-easy-import": "^3.0.0",
+    "postcss-hexrgba": "^1.0.0",
+    "postcss-lh": "^2.0.1",
+    "postcss-nested": "^3.0.0",
+    "postcss-simple-vars": "^4.1.0",
+    "stylefmt": "^6.0.0",
+    "vinyl-buffer": "^1.0.1",
+    "vinyl-source-stream": "^2.0.0"
+  },
+  "dependencies": {
+    "babel-polyfill": "^6.26.0"
+  }
+}

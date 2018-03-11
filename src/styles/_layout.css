@@ -1,0 +1,23 @@
+/*
+  Lost grid global settings
+  http://lostgrid.org/docs.html
+*/
+@lost gutter 20px;
+@lost flexbox no-flex;
+@lost cycle auto;
+@lost clearing both;
+
+/*!
+ * Layout
+ */
+body {
+  min-width: 320px;
+}
+
+/* .container {
+  lost-center: $mq_desktop 20px;
+} */
+
+/* .cfx {
+  lost-utility: clearfix;
+} */

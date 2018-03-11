@@ -1,0 +1,10 @@
+{
+  "presets": [
+    ["env", {
+      "debug": true,
+      "loose": true,
+      "modules": false,
+      "useBuiltIns": "usage"
+    }]
+  ]
+}

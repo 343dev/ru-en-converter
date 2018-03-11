@@ -1,0 +1,11 @@
+/* No need to lint this file */
+/* stylelint-disable */
+
+/* Fonts */
+$font_base  : '-apple-system', BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen-Sans, Ubuntu, Cantarell, 'Helvetica Neue', Arial, sans-serif;
+
+/* Media queries */
+$mq_phone   : 600px;
+$mq_tablet  : 900px;
+$mq_desktop : 1200px;
+$mq_wide    : 1800px;

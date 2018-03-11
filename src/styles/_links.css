@@ -1,0 +1,31 @@
+/*!
+ * Links
+ */
+.link {
+  padding-top: 0.2em;
+  border-bottom: 1px solid rgba(#2196f3, 0.5);
+  color: #2196f3;
+  text-decoration: none;
+  transition:
+    border-bottom 350ms ease,
+    color 350ms ease;
+
+  &:visited {
+    border-bottom-color: rgba(#2196f3, 0.5);
+    color: #2196f3;
+    transition-duration: 0s;
+  }
+
+  &:hover,
+  &:focus {
+    border-bottom-color: rgba(#f44336, 0.5);
+    color: #f44336;
+    transition-duration: 0s;
+  }
+
+  &:active {
+    border-bottom-color: rgba(#673ab7, 0.5);
+    color: #673ab7;
+    transition-duration: 0s;
+  }
+}
