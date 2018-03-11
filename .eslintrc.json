@@ -1,0 +1,18 @@
+{
+  "env": {
+    "browser": true,
+    "es6": true
+  },
+  "extends": [
+    "standard",
+    "plugin:promise/recommended"
+  ],
+  "parserOptions": {
+    "ecmaFeatures": {
+      "impliedStrict": true
+    }
+  },
+  "rules": {
+    "no-multiple-empty-lines": 0
+  }
+}
