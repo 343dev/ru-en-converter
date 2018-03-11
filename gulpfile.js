@@ -53,7 +53,7 @@ gulp.task('javascript', () => {
     entries: `${paths.src.js}/main.js`,
     extensions: ['.js'],
     paths: ['node_modules', paths.src.dir]
-  }).transform(babelify);
+  }).transform(babelify, { presets: ['env'] });
 
   return pipe(
     b.bundle(),
@@ -190,7 +190,11 @@ gulp.task('server', () => {
     open: false // local, external, ui, tunnel
   });
 
-  gulp.watch(`${paths.app.dir}/**/*`).on('change', browserSync.reload);
+  // gulp.watch(`${paths.app.dir}/**/*`).on('change', browserSync.reload);
+  gulp.watch(`${paths.app.dir}/**/*`).on('change', path => pipe(
+    gulp.src(path),
+    browserSync.reload({ stream: true })
+  ));
 });
 
 /**
