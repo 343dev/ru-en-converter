@@ -1828,6 +1828,10 @@ constants-browserify@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/constants-browserify/-/constants-browserify-1.0.0.tgz#c20b96d8c617748aaf1c16021760cd27fcb8cb75"
 
+convert-layout@^0.6.0:
+  version "0.6.0"
+  resolved "https://registry.yarnpkg.com/convert-layout/-/convert-layout-0.6.0.tgz#6b61dd98e02cc8fc8e09ca7589da1e4665ce019a"
+
 convert-source-map@^1.1.1, convert-source-map@^1.5.0:
   version "1.5.1"
   resolved "https://registry.yarnpkg.com/convert-source-map/-/convert-source-map-1.5.1.tgz#b8278097b9bc229365de5c62cf5fcaed8b5599e5"
@@ -1850,6 +1854,10 @@ copy-props@^2.0.1:
   dependencies:
     each-props "^1.3.0"
     is-plain-object "^2.0.1"
+
+copy-text-to-clipboard@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/copy-text-to-clipboard/-/copy-text-to-clipboard-1.0.4.tgz#2286ff6c53495962c5318d34746d256939069c49"
 
 core-js@^2.4.0, core-js@^2.5.0:
   version "2.5.3"
