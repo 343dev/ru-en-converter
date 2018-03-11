@@ -1,1 +1,1 @@
-console.log('JavaScript is enabled');
+import './converter'

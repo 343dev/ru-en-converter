@@ -1,0 +1,20 @@
+.converter {}
+
+.converter__item {
+  position: relative;
+
+  &:not(:last-child) {
+    margin-bottom: 16px;
+  }
+
+  .input_type_text .input__control {
+    padding-right: 68px;
+  }
+
+  .btn {
+    position: absolute;
+    top: 50%;
+    right: 9px;
+    transform: translateY(-50%);
+  }
+}
