@@ -1,0 +1,38 @@
+.btn {
+  box-sizing: border-box;
+  padding: 4px 8px;
+  border: 1px solid transparent;
+  border-radius: 4px;
+  background-color: #333;
+  color: #fff;
+  font: inherit;
+  line-height: 1;
+  cursor: pointer;
+  user-select: none;
+
+  &:focus,
+  &:active {
+    outline: none;
+    box-shadow: 0 0 0 2px rgba(#ffd43b, 0.6);
+  }
+
+  &_size_s {
+    font-size: 1.4rem;
+  }
+
+  &_rounded {
+    border-radius: 50px;
+  }
+
+  &_transparent {
+    border-color: #adb5bd;
+    background-color: transparent;
+    color: #868e96;
+
+    &:focus,
+    &:hover {
+      background-color: #adb5bd;
+      color: #f1f3f5;
+    }
+  }
+}
