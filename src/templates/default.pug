@@ -1,20 +1,19 @@
-- var isCSSDeferred = false;
+- var isCSSDeferred = true;
 
 doctype html
-html.no-js(lang='en')
+html.no-js(lang="en")
   head
-    meta(charset='utf-8')
-    meta(name='viewport' content='width=device-width, initial-scale=1.0')
-    meta(http-equiv='X-UA-Compatible' content='ie=edge')
+    meta(charset="utf-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible" content="ie=edge")
     block title
       title Untitled
     if !isCSSDeferred
       // inject:css
       // endinject
-    script
-      .
-        var $html = document.documentElement;
-        $html.className = $html.className.replace('no-js', '');
+    script.
+      var $html = document.documentElement;
+      $html.className = $html.className.replace('no-js', '');
 
   body.page
     block body
