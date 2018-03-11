@@ -1,0 +1,6 @@
+mixin input(type, placeholder)
+  label(for!=attributes.id class!=attributes.class)
+    span.input__label
+      if block
+        block
+    input.input__control(type=type id!=attributes.id placeholder=placeholder aria-label=placeholder)
