@@ -68,6 +68,11 @@ gulp.task('javascript', () => {
   );
 });
 
+gulp.task('javascript:sw', () => pipe(
+  gulp.src(`${paths.src.js}/serviceWorker.js`),
+  gulp.dest(paths.app.dir)
+));
+
 /**
  * Styles
  */
@@ -206,7 +211,7 @@ gulp.task('watch', () => {
   gulp.watch(`${paths.src.dir}/**/*.{png,jpg,gif,svg}`, gulp.series('images'));
 
   // sources
-  gulp.watch(`${paths.src.js}/**/*.js`, gulp.series('javascript'));
+  gulp.watch(`${paths.src.js}/**/*.js`, gulp.series('javascript', 'javascript:sw'));
   gulp.watch(`${paths.src.dir}/**/*.css`, gulp.series('styles'));
   gulp.watch(`${paths.src.dir}/**/*.pug`, gulp.series('html'));
 });
@@ -219,6 +224,7 @@ gulp.task('default', gulp.series(
   'static',
   'images',
   'javascript',
+  'javascript:sw',
   'styles',
   'html',
   gulp.parallel('server', 'watch')
