@@ -10,10 +10,17 @@
 }
 
 body {
-  background-color: #fff;
-  color: #141414;
   font-size: 1.6rem; /* 16px */
   line-height: 1.5;
+}
+
+::selection {
+  background-color: rgba(#ffd43b, 0.5);
+  color: #111;
+}
+::-moz-selection {
+  background-color: rgba(#ffd43b, 0.5);
+  color: #111;
 }
 
 /* p {
