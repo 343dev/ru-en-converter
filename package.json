@@ -1,7 +1,7 @@
 {
-  "name": "boilerplate-gulp-pug",
-  "description": "HTML projects boilerplate (Gulp, Pug, PostCSS, Browserify, Babel).",
-  "version": "3.0.2",
+  "name": "ru-en-converter",
+  "description": "Russian/English layout converter",
+  "version": "1.0.0",
   "private": true,
   "license": "MIT",
   "repository": {
