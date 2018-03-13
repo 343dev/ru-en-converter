@@ -1,10 +1,25 @@
 {
-  "presets": [
-    ["env", {
-      "debug": true,
-      "loose": true,
-      "modules": false,
-      "useBuiltIns": "usage"
-    }]
-  ]
+  "env": {
+    "production": {
+      "presets": [
+        ["env", {
+          "debug": true,
+          "loose": true,
+          "useBuiltIns": "usage",
+          "targets": {
+            "browsers": ["last 2 versions", "not ie < 11"]
+          }
+        }]
+      ]
+    },
+    "development": {
+      "presets": [
+        ["env", {
+          "targets": {
+            "browsers": ["last 2 versions", "not ie < 11"]
+          }
+        }]
+      ]
+    }
+  }
 }
