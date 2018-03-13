@@ -1,6 +1,24 @@
 extend templates/default.pug
+
+block meta
+  meta(name="description" content="Especially for people who type passwords in a different layout.")
+  meta(property="og:url" content="https://ru-en.surge.sh")
+  meta(property="og:image" content="https://ru-en.surge.sh/static/icons/android-chrome-512x512.png")
+  meta(property="og:title" content="Russian/English layout converter")
+  meta(property="og:description" content="Especially for people who type passwords in a different layout.")
+  meta(name="twitter:card" content="summary_large_image")
+  meta(name="msapplication-TileColor" content="#2b5797")
+  meta(name="theme-color" content="#f1f3f5")
+
 block title
-  title Ru-En Converter
+  title Ru/En Layout Converter
+
+block link
+  link(rel="apple-touch-icon" sizes="180x180" href="static/icons/apple-touch-icon.png")
+  link(rel="icon" type="image/png" sizes="32x32" href="static/icons/favicon-32x32.png")
+  link(rel="icon" type="image/png" sizes="16x16" href="static/icons/favicon-16x16.png")
+  link(rel="manifest" href="/site.webmanifest")
+  link(rel="mask-icon" href="static/icons/safari-pinned-tab.svg" color="#343a40")
 
 block body
   include blocks/app/app.pug
