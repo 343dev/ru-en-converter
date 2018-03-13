@@ -6,7 +6,7 @@
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "https://343dev@bitbucket.org/343dev/boilerplate-gulp-pug.git"
+    "url": "https://github.com/343dev/ru-en-converter.git"
   },
   "scripts": {
     "start": "gulp --continue",
