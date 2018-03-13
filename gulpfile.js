@@ -91,12 +91,8 @@ gulp.task('styles', () => {
       cachebuster: true
     }),
     require('postcss-hexrgba'),
-    require('postcss-lh'),
-    require('lost'),
     require('autoprefixer'),
-    require('css-mqpacker'),
-    require('postcss-combine-duplicated-selectors'),
-    require('stylefmt')
+    require('postcss-combine-duplicated-selectors')
   ]
 
   return pipe(
