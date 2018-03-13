@@ -46,24 +46,18 @@ paths.app.styles = `${paths.app.dir}/static/css`
 /**
  * JavaScript
  */
-gulp.task('javascript', () => {
-  const b = browserify({
-    entries: `${paths.src.js}/main.js`,
-    extensions: ['.js'],
-    paths: ['node_modules', paths.src.dir]
-  }).transform(babelify, { presets: ['env'] })
-
-  return pipe(
-    b.bundle(),
-    source('main.js'),
-    buffer(),
-    plumber(),
-    gulpIf(isProduction, rename({ suffix: '.min' })),
-    gulpIf(isProduction, butternut({})), // minify
-    gulpIf(isProduction, rev()), // append content hash to filename
-    gulp.dest(paths.app.js)
-  )
-})
+gulp.task('javascript', () => pipe(
+  browserify(`${paths.src.js}/main.js`)
+    .transform(babelify)
+    .bundle(),
+  source('main.js'),
+  buffer(),
+  plumber(),
+  gulpIf(isProduction, rename({ suffix: '.min' })),
+  gulpIf(isProduction, butternut({})), // minify
+  gulpIf(isProduction, rev()), // append content hash to filename
+  gulp.dest(paths.app.js)
+))
 
 /**
  * JavaScript: ServiceWorker
