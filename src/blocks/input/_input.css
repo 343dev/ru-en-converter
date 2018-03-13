@@ -21,22 +21,27 @@
 .input__control {
   box-sizing: border-box;
   margin: 0;
-  padding: 8px 0 8px 40px;
-  border: 1px solid #adb5bd;
-  border-radius: 4px;
-  background-color: transparent;
-  color: #495057;
+  color: currentcolor;
   font: inherit;
-  font-weight: 300;
-  line-height: 1;
+}
 
-  &::placeholder {
-    color: #adb5bd;
-  }
+.input_type_text {
+  .input__control {
+    padding: 8px 0 8px 40px;
+    border: 1px solid #adb5bd;
+    border-radius: 4px;
+    background-color: transparent;
+    color: #495057;
+    font-weight: 300;
 
-  &:focus {
-    outline: none;
-    box-shadow: 0 0 0 2px rgba(#ffd43b, 0.5);
+    &::placeholder {
+      color: #adb5bd;
+    }
+
+    &:focus {
+      outline: none;
+      box-shadow: 0 0 0 2px rgba(#ffd43b, 0.5);
+    }
   }
 }
 
