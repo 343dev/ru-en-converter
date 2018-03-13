@@ -3,11 +3,9 @@
   box-sizing: border-box;
   padding: 0 24px;
   max-width: 480px;
-  /* border: 1px solid #ccc; */
 }
 
 .app__header {
-  /* padding-top: 24px; */
   padding-bottom: 24px;
   text-align: center;
 }

@@ -2,11 +2,8 @@
  * Modules
  */
 @import 'styles/variables';
-/* @import 'styles/reset'; */
-/* @import 'styles/mq-helper'; */
 @import 'styles/typo';
 @import 'styles/layout';
-/* @import 'styles/links'; */
 
 /**
  * Blocks

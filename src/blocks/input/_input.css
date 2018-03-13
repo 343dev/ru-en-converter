@@ -22,10 +22,10 @@
   box-sizing: border-box;
   margin: 0;
   padding: 8px 0 8px 40px;
-  background-color: transparent;
-  color: #495057;
   border: 1px solid #adb5bd;
   border-radius: 4px;
+  background-color: transparent;
+  color: #495057;
   font: inherit;
   font-weight: 300;
   line-height: 1;
@@ -47,11 +47,6 @@
     width: 100%;
   }
 }
-
-/* .input_active,
-.input_has-value {
-  .input__label {}
-} */
 
 .input_size_l {
   font-size: 2.4rem;

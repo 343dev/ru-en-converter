@@ -1,23 +1,6 @@
-/*
-  Lost grid global settings
-  http://lostgrid.org/docs.html
-*/
-@lost gutter 20px;
-@lost flexbox no-flex;
-@lost cycle auto;
-@lost clearing both;
-
 /*!
  * Layout
  */
 html {
   height: 100%;
 }
-
-/* .container {
-  lost-center: $mq_desktop 20px;
-} */
-
-/* .cfx {
-  lost-utility: clearfix;
-} */
