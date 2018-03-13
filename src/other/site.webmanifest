@@ -1,20 +1,20 @@
 {
-    "name": "Ru-En Converter",
-    "short_name": "RU ↔ EN",
+    "name": "Ru-En Layout Converter",
+    "short_name": "Ru / En",
     "icons": [
         {
-            "src": "icons/android-chrome-192x192.png",
+            "src": "static/icons/android-chrome-192x192.png",
             "sizes": "192x192",
             "type": "image/png"
         },
         {
-            "src": "icons/android-chrome-512x512.png",
+            "src": "static/icons/android-chrome-512x512.png",
             "sizes": "512x512",
             "type": "image/png"
         }
     ],
     "theme_color": "#f1f3f5",
     "background_color": "#f1f3f5",
-    "start_url": "/",
+    "start_url": ".",
     "display": "standalone"
 }
