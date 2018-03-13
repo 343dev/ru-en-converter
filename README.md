@@ -1,6 +1,6 @@
 ![Logo of the project](./src/other/static/icons/apple-touch-icon.png)
 
-# ru-en-converter &middot; [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
+# ru-en-converter &middot; [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/343dev/ru-en-converter/blob/master/LICENSE)
 PWA: Russian/English Layout Converter.
 <br>
 Especially for people who type passwords in a different layout.
