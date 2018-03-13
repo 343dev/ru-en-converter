@@ -6,8 +6,6 @@ import './converter'
 if ('serviceWorker' in navigator) {
   navigator.serviceWorker
     .register('serviceWorker.js', { scope: './' })
-    .then(() => console.log('[ServiceWorker]: Registered'))
-    .catch(error => console.log('[ServiceWorker]: Registration error', error))
-} else {
-  console.log('The current browser doesn\'t support service workers.')
+    // .then(() => console.log('[ServiceWorker]: Registered'))
+    // .catch(error => console.log('[ServiceWorker]: Registration error', error))
 }
