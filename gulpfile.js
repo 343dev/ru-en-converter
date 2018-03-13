@@ -48,7 +48,7 @@ paths.app.styles = `${paths.app.dir}/static/css`
  */
 gulp.task('javascript', () => pipe(
   browserify(`${paths.src.js}/main.js`)
-    .transform(babelify)
+    .transform(babelify, { global: true })
     .bundle(),
   source('main.js'),
   buffer(),
