@@ -53,6 +53,7 @@
     "postcss-nested": "^3.0.0",
     "postcss-simple-vars": "^4.1.0",
     "stylefmt": "^6.0.0",
+    "sw-precache": "^5.2.1",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
   },
