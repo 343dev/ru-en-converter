@@ -11,7 +11,6 @@ Especially for people who type passwords in a different layout.
 ### Built With
 - [convert-layout](https://github.com/ai/convert-layout) — A JavaScript library to convert text from one keyboard layout to other.
 - [copy-text-to-clipboard](https://github.com/sindresorhus/copy-text-to-clipboard) — Copy text to the clipboard in modern browsers (0.2 kB).
-- [sw-precache](https://github.com/GoogleChromeLabs/sw-precache) — A node module to generate service worker code that will precache specific resources so they work offline.
 
 ### Prerequisites
 You need `Node.js` and `npm` installed.
@@ -27,7 +26,7 @@ npm install # or yarn
 ### Building
 
 ```shell
-npm run build:production
+npm run build
 ```
 
 If there is no errors, project will be available in the "build" directory.
