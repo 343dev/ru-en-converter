@@ -9,9 +9,8 @@
     "url": "https://github.com/343dev/ru-en-converter.git"
   },
   "scripts": {
-    "start": "gulp --continue",
-    "build": "gulp build",
-    "build:production": "NODE_ENV=production gulp build"
+    "start": "NODE_ENV=development gulp --continue",
+    "build": "NODE_ENV=production gulp build"
   },
   "browserslist": [
     "last 2 versions",
