@@ -8,14 +8,11 @@ const clean = require('gulp-dest-clean')
 const csso = require('gulp-csso')
 const gulp = require('gulp')
 const gulpIf = require('gulp-if')
-const imagemin = require('gulp-imagemin')
 const inject = require('gulp-inject')
 const htmlmin = require('gulp-htmlmin')
-const mozjpeg = require('imagemin-mozjpeg')
 const pipe = require('multipipe')
 const plumber = require('gulp-plumber')
 const postcss = require('gulp-postcss')
-const pngquant = require('imagemin-pngquant')
 const pug = require('gulp-pug')
 const rename = require('gulp-rename')
 const rev = require('gulp-rev')
@@ -73,11 +70,6 @@ gulp.task('styles', () => {
     require('postcss-discard-comments'),
     require('postcss-simple-vars'),
     require('postcss-nested'),
-    require('postcss-assets')({
-      loadPaths: [`${paths.app.dir}/**/*`],
-      relative: paths.app.styles,
-      cachebuster: true
-    }),
     require('postcss-hexrgba'),
     require('autoprefixer'),
     require('postcss-combine-duplicated-selectors')
@@ -94,30 +86,6 @@ gulp.task('styles', () => {
     gulp.dest(paths.app.styles)
   )
 })
-
-/**
- * Images
- */
-gulp.task('images', () => pipe(
-  gulp.src(`${paths.src.dir}/blocks/**/*.{png,jpg,gif,svg}`),
-  plumber(),
-  rename({ dirname: '' }), // remove a folder structure
-  clean(paths.app.img), // remove files from the destination folder
-  // changed(paths.app.img),
-  gulp.dest(paths.app.img)
-))
-
-gulp.task('images:optim', () => pipe(
-  gulp.src(`${paths.app.img}/*.{png,jpg,gif,svg}`),
-  plumber(),
-  imagemin([
-    mozjpeg({ progressive: true }),
-    pngquant({ nofs: true }),
-    imagemin.svgo(),
-    imagemin.gifsicle({ interlaced: true, optimizationLevel: 3 })
-  ], { verbose: true }),
-  gulp.dest(paths.app.img)
-))
 
 /**
  * HTML
@@ -189,8 +157,7 @@ gulp.task('server', () => {
     server: { baseDir: paths.app.dir },
     ghostMode: false,
     logConnections: true,
-    // tunnel: '343dev',
-    open: false // local, external, ui, tunnel
+    open: false
   })
 
   gulp.watch(`${paths.app.dir}/**/*`).on('change', path => pipe(
@@ -205,7 +172,6 @@ gulp.task('server', () => {
 gulp.task('watch', () => {
   // assets
   gulp.watch(`${paths.src.other}/**/*`, gulp.series('static'))
-  gulp.watch(`${paths.src.dir}/blocks/**/*.{png,jpg,gif,svg}`, gulp.series('images'))
 
   // sources
   gulp.watch(`${paths.src.js}/**/*.js`, gulp.series('javascript', 'javascript:sw'))
@@ -220,7 +186,6 @@ gulp.task('watch', () => {
 gulp.task('default', gulp.series(
   'clean',
   'static',
-  'images',
   'styles',
   'javascript',
   'html',
@@ -235,8 +200,6 @@ gulp.task('default', gulp.series(
 gulp.task('build', gulp.series(
   'clean',
   'static',
-  'images',
-  'images:optim',
   'styles',
   'javascript',
   'html',
