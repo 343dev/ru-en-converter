@@ -152,6 +152,13 @@ gulp.task('html', () => pipe(
       return file.contents.toString('utf8')
     }
   }),
+  inject(gulp.src(`${paths.app.js}/*.js`), {
+    removeTags: true,
+    starttag: '<!-- inject:body:{{ext}} -->',
+    transform (filePath, file) {
+      return file.contents.toString('utf8')
+    }
+  }),
   gulpIf(
     isProduction,
     htmlmin({

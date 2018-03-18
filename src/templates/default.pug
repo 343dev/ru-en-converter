@@ -1,5 +1,6 @@
 - var isCSSDeferred = false;
 - var injectCSS = true
+- var injectJS = true
 
 doctype html
 html.no-js(lang="en")
@@ -30,8 +31,13 @@ html.no-js(lang="en")
 
     ='\n\n'
     // JavaScript
-    // inject:js
-    // endinject
+    if injectJS
+      script
+        // inject:body:js
+        // endinject
+    else
+      // inject:js
+      // endinject
 
     if isCSSDeferred
       script.
