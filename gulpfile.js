@@ -139,7 +139,7 @@ gulp.task('html', () => pipe(
       }
     }
   ),
-  inject(gulp.src(`${paths.app.dir}/**/*.css`), {
+  inject(gulp.src(`${paths.app.styles}/*.css`), {
     removeTags: true,
     starttag: '<!-- inject:head:{{ext}} -->',
     transform (filePath, file) {

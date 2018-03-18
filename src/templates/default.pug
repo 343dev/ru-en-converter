@@ -13,13 +13,13 @@ html.no-js(lang="en")
       title Untitled
     block link
     if !isCSSDeferred
-      if !injectCSS
-        // inject:css
-        // endinject
-      else
+      if injectCSS
         style
           // inject:head:css
           // endinject
+      else
+        // inject:css
+        // endinject
 
     script.
       var $html = document.documentElement;
