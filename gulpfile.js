@@ -64,7 +64,7 @@ gulp.task('javascript', () => pipe(
  */
 gulp.task('javascript:sw', (callback) => {
   swPrecache.write(`${paths.app.dir}/serviceWorker.js`, {
-    staticFileGlobs: [`${paths.app.dir}/**/*.{html,js,css}`],
+    staticFileGlobs: [`${paths.app.dir}/**/*.{html,js}`],
     stripPrefix: paths.app.dir
   }, callback)
 })
@@ -137,6 +137,7 @@ gulp.task('html', () => pipe(
     {
       addRootSlash: false,
       ignorePath: `${paths.app.dir}/`,
+      removeTags: true,
       transform (filepath) {
         if (filepath.slice(-3) === '.js') return `<script src="${filepath}" async></script>`
         // Use the default transform as fallback
@@ -144,6 +145,13 @@ gulp.task('html', () => pipe(
       }
     }
   ),
+  inject(gulp.src(`${paths.app.dir}/**/*.css`), {
+    removeTags: true,
+    starttag: '<!-- inject:head:{{ext}} -->',
+    transform (filePath, file) {
+      return file.contents.toString('utf8')
+    }
+  }),
   gulpIf(
     isProduction,
     htmlmin({

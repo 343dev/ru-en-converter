@@ -1,4 +1,5 @@
-- var isCSSDeferred = true;
+- var isCSSDeferred = false;
+- var injectCSS = true
 
 doctype html
 html.no-js(lang="en")
@@ -11,8 +12,13 @@ html.no-js(lang="en")
       title Untitled
     block link
     if !isCSSDeferred
-      // inject:css
-      // endinject
+      if !injectCSS
+        // inject:css
+        // endinject
+      else
+        style
+          // inject:head:css
+          // endinject
 
     script.
       var $html = document.documentElement;
