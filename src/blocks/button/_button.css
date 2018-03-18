@@ -25,13 +25,13 @@
   }
 
   &_transparent {
-    border-color: #adb5bd;
+    border-color: #868e96;
     background-color: transparent;
-    color: #868e96;
+    color: #495057;
 
     &:focus,
     &:hover {
-      background-color: #adb5bd;
+      background-color: #868e96;
       color: #f1f3f5;
     }
   }
