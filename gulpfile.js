@@ -127,7 +127,7 @@ gulp.task('html', () => pipe(
   plumber(),
   pug({ pretty: true }),
   inject(
-    gulp.src([`${paths.app.dir}/**/*.js`, `${paths.app.dir}/**/*.css`], { read: false }),
+    gulp.src([`${paths.app.js}/*.js`, `${paths.app.styles}/*.css`], { read: false }),
     {
       addRootSlash: false,
       ignorePath: `${paths.app.dir}/`,
