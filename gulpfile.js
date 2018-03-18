@@ -10,7 +10,6 @@ const gulp = require('gulp')
 const gulpIf = require('gulp-if')
 const imagemin = require('gulp-imagemin')
 const inject = require('gulp-inject')
-const htmlbeautify = require('gulp-jsbeautifier')
 const htmlmin = require('gulp-htmlmin')
 const mozjpeg = require('imagemin-mozjpeg')
 const pipe = require('multipipe')
@@ -162,10 +161,6 @@ gulp.task('html', () => pipe(
       minifyCSS: true,
       minifyJS: true,
       removeComments: true
-    }),
-    htmlbeautify({
-      indent_size: 2,
-      end_with_newline: true
     })
   ),
   gulp.dest(paths.app.dir)
