@@ -21,7 +21,6 @@ const pug = require('gulp-pug')
 const rename = require('gulp-rename')
 const rev = require('gulp-rev')
 const source = require('vinyl-source-stream')
-const swPrecache = require('sw-precache')
 
 const isProduction = process.env.NODE_ENV === 'production'
 
@@ -62,12 +61,8 @@ gulp.task('javascript', () => pipe(
 /**
  * JavaScript: ServiceWorker
  */
-gulp.task('javascript:sw', (callback) => {
-  swPrecache.write(`${paths.app.dir}/serviceWorker.js`, {
-    staticFileGlobs: [`${paths.app.dir}/**/*.{html,js}`],
-    stripPrefix: paths.app.dir
-  }, callback)
-})
+gulp.task('javascript:sw', () =>
+  gulp.src(`${paths.src.js}/serviceWorker.js`).pipe(gulp.dest(paths.app.dir)))
 
 /**
  * Styles
