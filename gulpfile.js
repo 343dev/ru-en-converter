@@ -125,7 +125,7 @@ gulp.task('images:optim', () => pipe(
 gulp.task('html', () => pipe(
   gulp.src(`${paths.src.dir}/*.pug`),
   plumber(),
-  pug(),
+  pug({ pretty: true }),
   inject(
     gulp.src([`${paths.app.dir}/**/*.js`, `${paths.app.dir}/**/*.css`], { read: false }),
     {
