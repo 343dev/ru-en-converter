@@ -13,6 +13,11 @@
     position: absolute;
     top: 50%;
     right: 9px;
-    transform: translateY(-50%);
+    transform: scale(0.9) translateY(-55%);
+
+    &:hover,
+    &:focus {
+      transform: scale(1) translateY(-50%);
+    }
   }
 }
